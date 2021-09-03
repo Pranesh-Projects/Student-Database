@@ -23,4 +23,9 @@ public class StudentServiceImpl implements StudentService {
         return repository.findAll();
     }
 
+    @Override
+    public Student saveStudent(Student student) {
+        return repository.save(student);
+    }
+
 }
