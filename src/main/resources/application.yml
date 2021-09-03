@@ -10,7 +10,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hinernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
     hibernate:
       ddl-auto: update
@@ -19,7 +19,7 @@ server:
   error:
     include-message: always
 # to see the hibernate related quarries
-logging:
-  level: debug
+#logging:
+#  level: debug
 
 # logging.level.org.hibernate.SQL = DEBUG

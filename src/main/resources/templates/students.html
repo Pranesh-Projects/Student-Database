@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List</title>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>List of Students</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <a th:href="@{/student/new}" class="btn btn-primary btn-sm mb-3">Add Student</a>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Student Id</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--        for(int x : array)-->
+        <tr th:each="student: ${std}">
+            <td th:text="${student.firstname}"></td>
+            <td th:text="${student.lastname}"></td>
+            <td th:text="${student.email}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

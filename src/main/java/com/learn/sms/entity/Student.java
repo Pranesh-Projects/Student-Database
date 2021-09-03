@@ -1,4 +1,4 @@
-package com.learn.studentmanagementsystem.entity;
+package com.learn.sms.entity;
 
 import javax.persistence.*;
 
