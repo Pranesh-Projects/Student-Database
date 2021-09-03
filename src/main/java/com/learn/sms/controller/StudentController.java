@@ -5,9 +5,7 @@ import com.learn.sms.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class StudentController {
@@ -39,6 +37,29 @@ public class StudentController {
 
         return "redirect:/students";
 
+    }
+
+    @GetMapping("/student/edit/{id}")
+    public String editStudentForm(@PathVariable Long id, Model model){
+        model.addAttribute("student",service.getStudentByID(id));
+        return "edit_students";
+    }
+
+    @PutMapping("/students/{id}")
+    public String updateStudent(@PathVariable Long id, @ModelAttribute("student") Student student,Model model){
+        Student existingStudent = service.getStudentByID(id);
+        existingStudent.setId(id);
+        existingStudent.setFirstname(student.getFirstname());
+        existingStudent.setLastname(student.getLastname());
+        existingStudent.setEmail(student.getEmail());
+        service.updateStudent(existingStudent);
+        return "redirect:/students";
+    }
+
+    @GetMapping("/students/{id}")
+    public String deleteStudent(@PathVariable Long id){
+        service.deleteStudentByID(id);
+        return "redirect:/students";
     }
 
 }
