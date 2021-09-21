@@ -1,7 +1,6 @@
 package com.learn.sms.service;
 
 import com.learn.sms.entity.Student;
-
 import java.util.List;
 
 public interface StudentService{
