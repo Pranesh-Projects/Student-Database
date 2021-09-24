@@ -1,16 +1,16 @@
 spring:
 # Database
   datasource:
-    username: root
-    password: 12345678
-    url: jdbc:mysql://localhost:3306/s_m_s
+    username: sql6439702
+    password: CS548QR1Sm
+    url: jdbc:mysql://sql6.freesqldatabase.com:3306/sql6439702
     driver-class-name: com.mysql.cj.jdbc.Driver
 # Hibernate
   jpa:
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
       ddl-auto: update

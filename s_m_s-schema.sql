@@ -6,4 +6,3 @@ CREATE TABLE students(
     email VARCHAR(30),
     PRIMARY KEY (id)
 );
-
