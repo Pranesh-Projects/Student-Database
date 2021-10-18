@@ -1,9 +1,9 @@
 spring:
 # Database
   datasource:
-    username: sql6439702
-    password: CS548QR1Sm
-    url: jdbc:mysql://sql6.freesqldatabase.com:3306/sql6439702
+    username: uk2vhm7alj8cgcao
+    password: CU6SwTeVphcIMy4FeigW
+    url: jdbc:mysql://bdsrlrsyjk9hmlqqljhu-mysql.services.clever-cloud.com:3306/bdsrlrsyjk9hmlqqljhu
     driver-class-name: com.mysql.cj.jdbc.Driver
 # Hibernate
   jpa:
@@ -18,7 +18,7 @@ spring:
 server:
   error:
     include-message: always
-# to see the hibernate related quarries
+# to see hibernate related quarries
 #logging:
 #  level: debug
 
